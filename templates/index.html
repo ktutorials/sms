@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <!-- Site CSS -->
+        <link href="assets/css/site.css?1" rel="stylesheet"/>
+
+        <!-- Add jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <!-- Add site.js -->
+        <script src="js/site.js" rel="script" />
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="row">
+                <span class="col-5 brand display-4">
+                    School Management System
+                </span>
+            </div>
+        </header>
+        <main class="main">
+            <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Teachers</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <input class="btn btn-primary" type="button" id="registerBtn" value="Register">
+                    <div id="studentsList" class="cards">
+                    </div>
+                    <div class="hidden register" id="registerStudent">
+                        <h1 class="center">Register Student</h1>
+                        <div class="container center-content">
+                            <div class="row">
+                                <label class="col-1">Name *</label>
+                                <input class="col-3" required name="name" type="text" />
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Age *</label>
+                                <input class="col-3" required name="age" type="number" />
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Grade</label>
+                                <select name="grade"
+                                class="col-3">
+                                    <option>KG</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                            </select>
+
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Fun Club?</label>
+                                <span class="col-3">
+                                    <input type="radio" name="funClub" value="Yes"/>Yes
+                                    <span class="col-1"></span>
+                                    <input type="radio" name="funClub" value="No" selected/>No
+                                </span>
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Address *</label>
+                                <input class="col-3" required name="address" type="text"/>
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Emergecy contact *</label>
+                                <input class="col-3" required name="emergencyContact" type="tel"/>
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Parents contact *</label>
+                                <input class="col-3" required name="parentContact" type="tel"/>
+                            </div>
+                            <div class="row">
+                                <label class="col-1">Hobbies</label>
+                                <input class="col-3" name="hobbies" type="text"/>
+                            </div>
+                            <div class="row">
+                                <button type="button" id="submitStdBtn" class="col-1 btn btn-light">Submit</button>
+                                <span class="col-1"></span>
+                                <button type="button" id="resetBtn" class="col-1 btn btn-light">Reset</button>
+                                <span class="col-1"></span>
+                                <button type="button" id="cancelBtn" class="col-1 btn btn-light">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <h1 class="center">Register Teacher</h1>
+                    <div class="container center-content">
+                        <div class="row">
+                            <label class="col-1">Name *</label>
+                            <input class="col-3" required name="name" type="text" />
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Age *</label>
+                            <input class="col-3" required name="age" type="number" />
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Grade</label>
+                            <select name="grade"
+                            class="col-3">
+                                <option>KG</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                        </select>
+                        </div>
+                        <div>
+                            <label class="col-1">Year Of Exp. *</label>
+                            <input class="col-3" required name="yoe" type="number" />
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Address *</label>
+                            <input class="col-3" required name="address" type="text"/>
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Emergecy contact *</label>
+                            <input class="col-3" required name="emergencyContact" type="tel"/>
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Parents contact *</label>
+                            <input class="col-3" required name="parentContact" type="tel"/>
+                        </div>
+                        <div class="row">
+                            <label class="col-1">Hobbies</label>
+                            <input class="col-3" name="hobbies" type="text"/>
+                        </div>
+                        <div class="row">
+                            <button type="button" id="submitBtn" class="col-1 btn btn-light">Submit</button>
+                            <span class="col-1"></span>
+                            <button type="button" class="col-1 btn btn-light">Reset</buttonclass="col-1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="results"></div>
+        </main>
+        <footer class="center">
+            &copy; Copyright 2020 CFirst Technology Consulting LLC.
+        </footer>
+    </body>
+</html>
